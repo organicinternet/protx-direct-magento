@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <oiprotxdirect_direct_capture>
+        <remove name="right"/>
+        <remove name="left"/>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="organicinternet_protxdirect/dddsecureredirect" name="Dddsecureredirect" template="organicinternet_protxdirect/dddsecureredirect.phtml"/>
+        </reference>
+    </oiprotxdirect_direct_capture>
+    <oiprotxdirect_direct_failure>
+        <remove name="left"/>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="organicinternet_protxdirect/protxcheckoutfailure" name="Protxcheckoutfailure" template="organicinternet_protxdirect/protxcheckoutfailure.phtml"/>
+        </reference>
+    </oiprotxdirect_direct_failure>
+
+	<oiprotxonepage_onepage_saveorder>
+	    <update handle="checkout_onepage_saveorder" />
+	</oiprotxonepage_onepage_saveorder>
+	<oiprotxmultishipping_multishipping_overviewpost>
+	    <update handle="checkout_multishipping_overviewpost" />
+	</oiprotxmultishipping_multishipping_overviewpost>
+</layout>
