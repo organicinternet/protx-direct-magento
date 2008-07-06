@@ -1,0 +1,19 @@
+<?php if($_info = $this->getInfo()): ?>
+<?php echo $this->__('Cardholder: %s', $this->getInfo()->getCcOwner()) ?><br />
+<?php echo $this->__('Card Type: %s', $this->getCcTypeName()) ?><br />
+<?php echo $this->__('Card Number: xxxx-%s', $this->getInfo()->getCcLast4()) ?><br />
+<?php echo $this->__('Expiration Date: %s/%s', $this->getCcExpMonth(), $this->getInfo()->getCcExpYear()) ?><br />
+<?php if($this->getInfo()->getCcSsIssue()): ?>
+<?php echo $this->__("Issue Number: %s", $this->getInfo()->getCcSsIssue()) ?><br />
+<?php endif; ?>
+<?php if($this->getInfo()->getCcSsStartYear()): ?>
+<?php echo $this->__('Start Date: %02d/%4d', $this->getInfo()->getCcSsStartMonth(), $this->getInfo()->getCcSsStartYear()) ?><br />
+<?php endif; ?>
+<br /><b>Protx Transaction Details:</b><br />
+Transaction ID: <?php echo $this->getInfo()->getCcTransId() ?><br />
+AVS Result: <?php echo $this->getInfo()->getCcAvsStatus() ?><br />
+Postcode Result: <?php echo $this->getInfo()->getCcPostcodeResult() ?><br />
+CV2 Result: <?php echo $this->getInfo()->getCcCv2Result() ?><br />
+3D Secure Status: <?php echo $this->getInfo()->getCc3dSecureStatus() ?><br />
+<?php /* echo '<xmp>'.var_export($this->getInfo()->getData(), true).'</xmp>' */ ?>
+<?php endif; ?>

@@ -1,0 +1,10 @@
+Protx Direct payment gateway for Magento
+
+Users please download the latest version of the module from Magento Connect.
+
+Developers expand paths as follows:
+
+app_code_community_OrganicInternet_ProtxDirect -> app/code/community/OrganicInternet/ProtxDirect
+app_design_adminhtml_default_default_template_organicinternet_protxdirect -> app/design/adminhtml/default/default/templates/organicinternet_protxdirect
+app_design_frontend_default_default_template_organicinternet_protxdirect -> app/design/frontend/default/default/template/organicinternet_protxdirect
+app_etc_modules_OrganicInternet_ProtxDirect.xml app/etc/modules/OrganicInternet_ProtxDirect.xml

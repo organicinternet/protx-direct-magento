@@ -1,0 +1,13 @@
+<config>
+    <modules>
+        <OrganicInternet_ProtxDirect>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+	            <Mage_Payment />
+	            <Mage_Protx />
+	        </depends>
+	        <version>0.0.1</version>
+        </OrganicInternet_ProtxDirect>
+    </modules>
+</config>

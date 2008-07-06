@@ -1,0 +1,17 @@
+<?php if($_info = $this->getInfo()): ?>
+    <?php echo $this->__('Cardholder: %s', $this->getInfo()->getCcOwner()) ?>
+        {{pdf_row_separator}}
+    <?php echo $this->__('Card Type: %s', $this->getCcTypeName()) ?>
+        {{pdf_row_separator}}
+    <?php echo $this->__('Card Number: xxxx-%s', $this->getInfo()->getCcLast4()) ?>
+        {{pdf_row_separator}}
+    <?php echo $this->__('Expiration Date: %s/%s', $this->getCcExpMonth(), $this->getInfo()->getCcExpYear()) ?>
+        {{pdf_row_separator}}
+    <?php if($this->getInfo()->getCcSsIssue()): ?>
+        <?php echo $this->__("Issue number: %d", $this->getInfo()->getCcSsIssue()) ?>
+            {{pdf_row_separator}}
+    <?php endif; ?>
+    <?php if($this->getInfo()->getCcSsStartYear()): ?>
+        <?php echo $this->__('Start Date: %02d/%4d', $this->getInfo()->getCcSsStartMonth(), $this->getInfo()->getCcSsStartYear()) ?>
+    <?php endif; ?>
+<?php endif; ?>
